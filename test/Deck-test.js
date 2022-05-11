@@ -46,6 +46,7 @@ describe('Deck', function(){
     const testCard3 = new Card(3, 'What is 2 plus 2?', ['4', '1', '1145'], '4');
     const deck = new Deck([testCard, testCard2, testCard3]);
 
+
     expect(deck.countCards()).to.equal(deck.cardArray.length);
   });
 
