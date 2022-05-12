@@ -36,7 +36,7 @@ class Round{
 
     var percentageCorrect = 100 - (this.incorrectGuesses.length / this.deck.cardArray.length) * 100;
 
-    return percentageCorrect + "%";
+    return percentageCorrect.toFixed(2) + "%";
 
   }
 
