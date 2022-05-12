@@ -14,7 +14,9 @@ class Round{
     return this.currentCard;
   }
 
-  takeTurn(guess, cardObj){
+  takeTurn(guess){
+    const cardObj = this.returnCurrentCard();
+
     this.currentTurn = new Turn(guess, cardObj);
     this.turns++;
     let currentGuess = this.currentTurn.evaluateGuess();
@@ -36,12 +38,12 @@ class Round{
 
     var percentageCorrect = 100 - (this.incorrectGuesses.length / this.deck.cardArray.length) * 100;
 
-    return percentageCorrect + "%";
+    return percentageCorrect.toFixed(2) + "%";
 
   }
 
   endRound(){
-    console.log(`** Round over! ** You answered ${calculatePercentCorrect()} of the questions correctly!`)
+    console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()} of the questions correctly!`)
   }
 }
 
