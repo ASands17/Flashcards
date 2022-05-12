@@ -18,13 +18,10 @@ describe('Game', function(){
 
   it ('should be a function', function() {
     expect(Game).to.be.a('function');
-    game.start();
   });
 
   it('should track the current round', function() {
-
-    game.start();
-    expect(game.currentRound).to.equal(2);
+    expect(game.currentRound).to.equal(0);
 
   });
 
