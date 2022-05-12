@@ -76,8 +76,8 @@ describe('Round', function(){
 
 
   it('calculates percentage of correct guesses', function(){
-    // const deck = new Deck([testCard, testCard2, testCard3]);
-    // const round1 = new Round(deck);
+    const deck = new Deck([testCard, testCard2, testCard3]);
+    const round1 = new Round(deck);
 
     var firstCard = round1.currentCard;
     round1.takeTurn('Blue', firstCard);
