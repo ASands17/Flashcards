@@ -13,21 +13,17 @@ class Game {
   }
 
   start() {
-
     this.currentRound++
-
     this.prototypeQuestions.forEach((question) => {
       this.cardArray.push(new Card(question.id, question.question, question.answers, question.correctAnswer))
     });
 
     let startDeck = new Deck(this.cardArray);
     let startRound = new Round(startDeck);
-    // console.log(startRound)
 
     this.printMessage(startDeck, startRound);
     this.printQuestion(startRound);
   }
-
 
   printMessage(deck, round) {
     console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
