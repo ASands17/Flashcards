@@ -19,8 +19,9 @@ This app allows you to:
 
 ### Example
 - Answer quiz questions in your console!
-
+![Answer Questions](/assets/fc-gif-1.gif)
 - See your percentage of correct guesses once the game is complete.
+![Answer Questions](/assets/fc-gif-2.gif)
 
 ### Technologies
 - JavaScript
