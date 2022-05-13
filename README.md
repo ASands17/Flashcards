@@ -18,6 +18,9 @@ This app allows you to:
 - Get a percentage of correct guesses at the end of the game round
 
 ### Example
+- Answer quiz questions in your console!
+
+- See your percentage of correct guesses once the game is complete.
 
 ### Technologies
 - JavaScript
