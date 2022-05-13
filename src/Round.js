@@ -16,10 +16,10 @@ class Round{
 
   takeTurn(guess){
     const cardObj = this.returnCurrentCard();
-
     this.currentTurn = new Turn(guess, cardObj);
     this.turns++;
     let currentGuess = this.currentTurn.evaluateGuess();
+
     if (!currentGuess){
       this.incorrectGuesses.push(cardObj.id);
     }
@@ -30,16 +30,12 @@ class Round{
     if (this.incorrectGuesses.length === 0 && this.turns === this.deck.cardArray.length) {
       return (100 + "%");
     }
-
     if (this.incorrectGuesses.length === 0 && this.turns !== this.deck.cardArray.length) {
       const score = this.turns/this.deck.cardArray.length * 100
       return `${(score.toFixed(2))}%`;
     }
-
     var percentageCorrect = 100 - (this.incorrectGuesses.length / this.deck.cardArray.length) * 100;
-
     return percentageCorrect.toFixed(2) + "%";
-
   }
 
   endRound(){
