@@ -22,7 +22,7 @@ class Game {
 
     let startDeck = new Deck(this.cardArray);
     let startRound = new Round(startDeck);
-    console.log(startRound)
+    // console.log(startRound)
 
     this.printMessage(startDeck, startRound);
     this.printQuestion(startRound);
